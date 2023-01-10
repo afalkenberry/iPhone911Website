@@ -1,0 +1,98 @@
+html, body {
+	margin: 0px;
+  padding: 0px;
+  width: 100%;
+  min-height: 100vh;
+	overflow-x: hidden;
+  scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+  background-color: #efeeee;
+}
+
+#navbarNav {
+  padding-left: 40%;
+}
+
+.navbar-brand {
+  padding-left: 20%;
+}
+
+img {
+  width: inherit;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*.overlay-text {
+  position: absolute;
+  color: black;
+}*/
+
+#aboutus p{
+  margin:0 auto;
+  padding: 0 5% 0 5%; 
+  width: inherit;
+  font-size: 1em;
+  line-height: 1.45em;
+  letter-spacing: .05em;
+  color: rgb(64, 64, 64);
+  text-align: justify;
+}
+#aboutus h4{
+  color: rgb(64, 64, 64);
+  padding: 0 5% 0 5%;
+}
+
+#location-section src{
+  width: inherit;
+  margin: 0 auto;
+}
+
+#navbar {
+  width: inherit;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.warranty-header {
+  margin-top: 10px;
+}
+
+.phoneimg1 {
+  background-image: url("buyhomepageimg/BuyMainiPhoneImage.JPG");
+  /*width: inherit;*/
+  /*height: auto;*/
+  min-height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0px;
+  position: relative;
+}
+
+.phoneimg2 {
+  background-image: url("buyhomepageimg/BuyMainSamsungImage.JPG");
+  /*width: inherit;*/
+  /*height: 30px;*/
+  min-height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0px;
+  position: relative;  
+}
+
+figure {
+  height: 100px;
+}
+
+#buyphoneimg {
+  margin: 10% auto;
+}
+
+#iphonedropdown {
+  padding-right: 30px;
+}
+
+#samsungdropdown {
+  padding-left: 30px;
+}
