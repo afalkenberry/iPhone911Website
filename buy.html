@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>buy</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="script.js"></script>
 </head>
 <body>
 
@@ -13,7 +15,7 @@
   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary" id="navbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html">TheiPhone911</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" data-bs-toggle="dropdown" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-toggle="dropdown" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -25,12 +27,13 @@
           <a class="nav-link" href="repair.html">Repair</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.html.html">Contact</a>
+          <a class="nav-link" href="contact.html">Contact</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+  
 
   <!--iPHONE/SAMSUNG HOME PAGE IMAGE SECTION -->
 <section id = "buyphoneimg">
@@ -39,7 +42,7 @@
       <div class = "col-lg-2 col-md-auto col-sm-6">
         <picture>
             <div id="iphonedropdown">
-        <a data-toggle="collapse" href="#iphonecollapse" onclick=""role="button" aria-expanded="false" aria-controls="collapseExample"><img src = "buyhomepageimg/BuyMainiPhoneImage.JPG" class = "img-fluid"></a>
+        <a data-toggle="collapse" href="#iphonecollapse" role="button" aria-expanded="false" aria-controls="iphonecollapse"><img src = "buyhomepageimg/BuyMainiPhoneImage.JPG" class = "img-fluid"></a>
             </div>
       </picture>
         <div class="text-center">
@@ -59,12 +62,11 @@
     </div>
   </div>
 </section>
+  
 
 <!-- COLLAPSE PHONE SECTION (inside accordion div)-->
 
   <!-- iPHONE COLLAPSE SECTION -->
-
-  <p id="scroll">Scroll to this</p>
   
 <div id="accordion" class="text-center">
   <div class="card">
@@ -73,190 +75,162 @@
       <div class="card-body">
         
       <!-- iPHONE IMAGE AND PRICING SECTION -->
-
-  -<div class = "container-fluid" id="phoneimgcontainer">
+<button class="btn btn-primary text-center sticky-top" id="back-button">Back</button>
+  <div class ="iphoneimgcontainer">
     <div class = "row justify-content-center">
       <div class = "col-lg-4 col-sm-6">
         <picture>
-        <img src = "buyiphone/iPhone7.jpg" class = "img-fluid">
+        <img src = "buyiphone/iPhone13PROMAX.jpg" class = "img-fluid">
       </picture>
-        <div class="text-center">
-        <h5 class="text-center">iPhone 7</h5>
-        </div>
+        <h6>iPhone 13 Pro Max</h6>
       </div>
       <div class = "col-lg-4 col-sm-6">
         <picture>
-       <img src = "buyiphone/iPhone8.jpg" class = "img-fluid">
+       <img src = "buyiphone/iPhone13PRO.jpg" class = "img-fluid">
         </picture>
-        <div class="text-center">
-        <h5 class="text-center">iPhone 8</h5>
-        </div>
+        <h6>iPhone 13 Pro</h6>
       </div>
       <div class = "col-lg-4 col-sm-6">
         <picture>
-       <img src = "buyiphone/iPhoneSE.jpg" class = "img-fluid">
+       <img src = "buyiphone/iPhone13.jpg" class = "img-fluid">
         </picture>
-        <div class="text-center">
-        <h5 class="text-center">iPhone SE</h5>
-        </div>
+        <h6>iPhone 13</h6>
       </div>
       <div class = "col-lg-4 col-sm-6">
         <picture>
-       <img src = "buyiphone/iPhone8Plus.jpg" class = "img-fluid">
+       <img src = "buyiphone/iPhone13MINI.jpg" class = "img-fluid">
         </picture>
-        <div class="text-center">
-        <h5 class="text-center">iPhone 8 Plus</h5>
-        </div>
+        <h6>iPhone 13 Mini</h6>
+      </div>
+      <div class = "col-lg-4 col-sm-6">
+        <picture>
+       <img src = "buyiphone/iPhone12PROMAX.jpg" class = "img-fluid">
+        </picture>
+        <h6>iPhone 12 Pro Max</h6>
+      </div>
+      <div class = "col-lg-4 col-sm-6">
+        <picture>
+       <img src = "buyiphone/iPhone12PRO.jpg" class = "img-fluid">
+        </picture>
+        <h6>iPhone 12 Pro</h6>
+      </div>
+      <div class = "col-lg-4 col-sm-6">
+        <picture>
+       <img src = "buyiphone/iPhone12.jpeg" class = "img-fluid">
+        </picture>
+        <h6>iPhone 12</h6>
+      </div>
+      <div class = "col-lg-4 col-sm-6">
+        <picture>
+       <img src = "buyiphone/iPhone12MINI.jpg" class = "img-fluid">
+        </picture>
+        <h6>iPhone 12 Mini</h6>
+      </div>
+      <div class = "col-lg-4 col-sm-6">
+        <picture>
+       <img src = "buyiphone/iPhone11PROMAX.jpg" class = "img-fluid">
+        </picture>
+        <h6>iPhone 11 Pro Max</h6>
+      </div>
+      <div class = "col-lg-4 col-sm-6">
+        <picture>
+       <img src = "buyiphone/iPhone11PRO.jpg" class = "img-fluid">
+        </picture>
+        <h6>iPhone 11 PRO</h6>
+      </div>
+      <div class = "col-lg-4 col-sm-6">
+        <picture>
+       <img src = "buyiphone/iPhone11.jpg" class = "img-fluid">
+        </picture>
+        <h6>iPhone 11</h6>
+      </div>
+      <div class = "col-lg-4 col-sm-6">
+        <picture>
+       <img src = "buyiphone/iPhoneXSMAX.jpg" class = "img-fluid">
+        </picture>
+        <h6>iPhone XS Max</h6>
+      </div>
+      <div class = "col-lg-4 col-sm-6">
+        <picture>
+       <img src = "buyiphone/iPhoneXS.jpg" class = "img-fluid">
+        </picture>
+        <h6>iPhone XS</h6>
+      </div>
+      <div class = "col-lg-4 col-sm-6">
+        <picture>
+       <img src = "buyiphone/iPhoneXR.jpg" class = "img-fluid">
+        </picture>
+        <h6>iPhone XR</h6>
       </div>
       <div class = "col-lg-4 col-sm-6">
         <picture>
        <img src = "buyiphone/iPhoneX.jpg" class = "img-fluid">
         </picture>
-        <div class="text-center">
-        <h5>iPhone X</h5>
-        </div>
+        <h6>iPhone X</h6>
+      </div>
+      <div class = "col-lg-4 col-sm-6">
+        <picture>
+       <img src = "buyiphone/iPhone8Plus.jpg" class = "img-fluid">
+        </picture>
+        <h6>iPhone 8 Plus</h6>
+      </div>
+      <div class = "col-lg-4 col-sm-6">
+        <picture>
+       <img src = "buyiphone/iPhoneSE.jpg" class = "img-fluid">
+        </picture>
+        <h6>iPhone SE</h6>
       </div>
       <div class = "col-lg-4 col-sm-6">
         <picture>
        <img src = "buyiphone/iPhone8.jpg" class = "img-fluid">
         </picture>
-        <div class="text-center">
-        <h5>iPhone XR</h5>
-        </div>
+        <h6>iPhone 8</h6>
       </div>
       <div class = "col-lg-4 col-sm-6">
         <picture>
-       <img src = "buyiphone/iPhone8.jpg" class = "img-fluid">
+       <img src = "buyiphone/iPhone7.jpg" class = "img-fluid">
         </picture>
-        <div class="text-center">
-        <h5>iPhone XS</h5>
-        </div>
-      </div>
-      <div class = "col-lg-4 col-sm-6">
-        <picture>
-       <img src = "buyiphone/iPhone8.jpg" class = "img-fluid">
-        </picture>
-        <div class="text-center">
-        <h5>iPhone XS MAX</h5>
-        </div>
-      </div>
-      <div class = "col-lg-4 col-sm-6">
-        <picture>
-       <img src = "buyiphone/iPhone8.jpg" class = "img-fluid">
-        </picture>
-        <div class="text-center">
-        <h5>iPhone 11</h5>
-        </div>
-      </div>
-      <div class = "col-lg-4 col-sm-6">
-        <picture>
-       <img src = "buyiphone/iPhone8.jpg" class = "img-fluid">
-        </picture>
-        <div class="text-center">
-        <h5>iPhone 11 PRO</h5>
-        </div>
-      </div>
-      <div class = "col-lg-4 col-sm-6">
-        <picture>
-       <img id="iphone11promax" src = "buyiphone/iPhone8.jpg" class = "img-fluid">
-        </picture>
-        <div class="text-center">
-        <h5>iPhone 11 PRO MAX</h5>
-        </div>
-      </div>
-      <div class = "col-lg-4 col-sm-6">
-        <picture>
-       <img src = "buyiphone/iPhone8.jpg" class = "img-fluid">
-        </picture>
-        <div class="text-center">
-        <h5>iPhone 12 MINI</h5>
-        </div>
-      </div>
-      <div class = "col-lg-4 col-sm-6">
-        <picture>
-       <img src = "buyiphone/iPhone8.jpg" class = "img-fluid">
-        </picture>
-        <div class="text-center">
-        <h5>iPhone 12</h5>
-        </div>
-      </div>
-      <div class = "col-lg-4 col-sm-6">
-        <picture>
-       <img src = "buyiphone/iPhone8.jpg" class = "img-fluid">
-        </picture>
-        <div class="text-center">
-        <h5>iPhone 12 PRO</h5>
-        </div>
-      </div>
-      <div class = "col-lg-4 col-sm-6">
-        <picture>
-       <img src = "buyiphone/iPhone8.jpg" class = "img-fluid">
-        </picture>
-        <div class="text-center">
-        <h5>iPhone 12 PRO MAX</h5>
-        </div>
-      </div>
-      <div class = "col-lg-4 col-sm-6">
-        <picture>
-       <img src = "buyiphone/iPhone8.jpg" class = "img-fluid">
-        </picture>
-        <div class="text-center">
-        <h5>iPhone 13 MINI</h5>
-        </div>
-      </div>
-      <div class = "col-lg-4 col-sm-6">
-        <picture>
-       <img src = "buyiphone/iPhone8.jpg" class = "img-fluid">
-        </picture>
-        <div class="text-center">
-        <h5>iPhone 13</h5>
-        </div>
-      </div>
-      <div class = "col-lg-4 col-sm-6">
-        <picture>
-       <img src = "buyiphone/iPhone8.jpg" class = "img-fluid">
-        </picture>
-        <div class="text-center">
-        <h5>iPhone 13 PRO</h5>
-        </div>
-      </div>
-      <div class = "col-lg-4 col-sm-6">
-        <picture>
-       <img src = "buyiphone/iPhone8.jpg" class = "img-fluid">
-        </picture>
-        <div class="text-center">
-        <h5>iPhone 13 PRO MAX</h5>
-        </div>
+        <h6>iPhone 7</h6>
       </div>
       </div>
       </div>
-        
-      
-    
-   
-
       </div>
     </div>
-  </div>
 
   <!-- SAMSUNG COLLAPSE SECTION -->
   <div class="card">
     
     <div id="samsungcollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
-        <!--> SAMSUNG IMAGE AND PRICING SECTION -->
-        SAMSUNG IMAGES WILL BE HERE. FILLER TEXT (Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS).
+        
+        <!-- SAMSUNG IMAGE AND PRICING SECTION -->
+        
+  <div class = "samsungimgcontainer">
+    <div class = "row justify-content-center">
+      <div class = "col-lg-2 col-md-auto col-sm-6">
+        <picture>
+       <img src = "buyhomepageimg/BuyMainSamsungImage.JPG" class = "img-fluid"></a>
+        </picture>
+        <div class="text-center">
+        <h5>Call for availability</h5>
+        </div>
       </div>
     </div>
+  </div>
+      </div>
+    </div>
+  </div>
+  
   </div>
  
 
   
-
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <script src="script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>
