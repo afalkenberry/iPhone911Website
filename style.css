@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
 	margin: 0px;
   padding: 0px;
@@ -7,6 +11,12 @@ html, body {
   scroll-behavior: smooth;
 	-webkit-font-smoothing: antialiased;
   background-color: #efeeee;
+}
+
+.hero-img img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
 }
 
 #navbarNav {
@@ -23,11 +33,6 @@ img {
   margin: 0 auto;
   text-align: center;
 }
-
-/*.overlay-text {
-  position: absolute;
-  color: black;
-}*/
 
 #aboutus p{
   margin:0 auto;
@@ -53,32 +58,11 @@ img {
   width: inherit;
   margin: 0 auto;
   text-align: center;
+  position: fixed;
 }
 
 .warranty-header {
   margin-top: 10px;
-}
-
-.phoneimg1 {
-  background-image: url("buyhomepageimg/BuyMainiPhoneImage.JPG");
-  /*width: inherit;*/
-  /*height: auto;*/
-  min-height: 90vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0px;
-  position: relative;
-}
-
-.phoneimg2 {
-  background-image: url("buyhomepageimg/BuyMainSamsungImage.JPG");
-  /*width: inherit;*/
-  /*height: 30px;*/
-  min-height: 90vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0px;
-  position: relative;  
 }
 
 figure {
@@ -91,8 +75,192 @@ figure {
 
 #iphonedropdown {
   padding-right: 30px;
+  height: 300px;
+}
+
+/*home page iphone img*/
+.iphonedropdownimg img{
+  height: 300px;
+  object-fit: fill;
 }
 
 #samsungdropdown {
   padding-left: 30px;
+  height: 300px;
+}
+
+/*home page samsung img*/
+.samsungdropdownimg img{
+  height: 300px;
+  object-fit: fill;
+}
+
+/*this seems to affect the whole entire accordion card container (the entire card page is only highlighted 300px) so maybe I need to put a shared class on every col to make the height uniform*/
+#iphoneimgcontainer {
+padding: 20px;
+}
+
+/*don't understand how this works because the images are still different sizes (if I use object-fit: fill, it seems to work)*/
+/*setting height and width of iphone images, as well as spacing them out a bit*/
+#iphoneimgcontainer img {
+  height: 200px;
+  width: auto;
+  padding-top: 30px;
+}
+
+/*Setting space between the phone pictures in buy section*/
+#phoneimgcontainer img {
+  padding-top: 30px;
+}
+
+
+picture {
+  width: 250px;
+  height: auto;
+}
+
+/*setting margin to space out images*/
+.repair-img img{
+  height: 200px;
+  width: inherit;
+  object-fit: scale-down;
+}
+
+/* removes the lines from the accordion */
+#accordion .card {
+    border: none;
+    box-shadow: none;
+}
+
+/* form css */
+form input {
+  margin: 20px;
+}
+
+
+form .col{
+ padding: 20px;
+}
+
+form textarea {
+  height: 155px;
+  margin: 20px;
+}
+
+#message {
+  padding: 100px;
+}
+
+#repairdevices .container {
+  margin-top: 50px;
+}
+
+/*should probably put a class on this specific h1*/
+#iphonecard h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+
+#repairdevices .selectdevice {
+  margin-top: 0px;
+  padding-bottom: 20px;
+}
+
+#repairdevices h1 {
+  margin-bottom: 40px;
+}
+
+#ipadcard .ipadmodel {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+#back-button {
+  position: fixed;
+  margin-top: 50px;
+}
+
+#backbutton2 {
+  position: fixed;
+  margin-top: 5px;
+}
+
+#backbutton3 {
+  position: fixed;
+  margin-top: 5px;
+}
+
+.d-flex img{
+  height: 200px;
+  width: inherit;
+  object-fit: scale-down;
+}
+
+#macsubcardcol {
+  background-color: blue;
+  height: 400px;
+}
+
+#macsubcardcol img {
+  height: 200px;
+  object-fit: scale-down;
+}
+
+#macsubcardcol h5 {
+  padding-top: 30px;
+}
+
+#microsolderingcard {
+  margin-bottom: 160px;
+  margin-top: 160px;
+}
+
+.mobodescription h1 {
+  padding-bottom: 40px;
+}
+
+.mobodescription bold {
+  padding-bottom: 200px;
+}
+
+#microsoldering col {
+  background-color: blue;
+  height: 400px;
+}
+
+#microsolderingcol img {
+  height: 300px;
+  object-fit: scale-down;
+}
+
+.mobodescription {
+  font-size: 1.1em;
+}
+
+#ipadmodels {
+padding-top: 80px;
+}
+
+.ipad-img img {
+  height: 200px;
+  object-fit: scale-down;
+  margin-top: 50px;
+}
+
+/*Styling for phone repair container*/
+#phonerepaircontainer {
+  background-color: blue;
+  padding-bottom: 155px;
+  padding-top: 155px;
+}
+
+#phonerepaircontainer img {
+  height: 280px;
+  width: auto;
+  padding-top: 40px;
+}
+
+#phonerepaircontainer h3 {
+  margin-bottom: 100px;
 }
