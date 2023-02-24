@@ -1,0 +1,21 @@
+{
+"iPhone13ProMax": [{ "128GB":"Price1"}, {"256GB":"Price2"}],
+"iPhone13Pro": [{"128GB":"Price3"}, {"256GB":"Price4"}],
+"iPhone13": [{"128GB":"Price5"}, {"256GB":"Price6"}],
+"iPhone13Mini": [{"128GB":"Price7"}, {"256GB":"Price8"}],
+"iPhone12ProMax": [{"128GB":"Price9"}, {"256GB":"Price10"}],
+"iPhone12Pro": [{"128GB":"Price11"}, {"256GB":"Price12"}],
+"iPhone12": [{"64GB":"Price13"}, {"128GB":"Price14"}, {"256GB":"Price15"}],
+"iPhone12Mini": [{"64GB":"Price16"}, {"128GB":"Price17"}, {"256GB":"Price18"}],
+"iPhone11ProMax": [{"64GB":"Price19"}, {"256GB":"Price20"}],
+"iPhone11Pro": [{"64GB":"Price21"}, {"256GB":"Price22"}],
+"iPhone11": [{"64GB":"Price23"}, {"128GB":"Price24"}, {"256GB":"Price25"}],
+"iPhoneXSMax": [{"64GB":"Price26"}, {"256GB":"Price27"}],
+"iPhoneXS": [{"64GB":"Price28"}, {"256GB":"Price29"}],
+"iPhoneXR": [{"64GB":"Price30"}, {"128GB":"Price31"}, {"256GB":"Price32"}],
+"iPhoneX": [{"64GB":"Price33"}, {"256GB":"Price34"}],
+"iPhone8Plus": [{"64GB":"Price35"}, {"256GB":"Price36"}],
+"iPhoneSE": [{"64GB":"Price37"}, {"128GB":"Price38"}, {"256GB":"Price39"}],
+"iPhone8": [{"64GB":"Price40"}, {"256GB":"Price41"}],
+"iPhone7": [{"32GB":"Price42"}, {"128GB":"Price43"}]
+}
