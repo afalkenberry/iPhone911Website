@@ -1,7 +1,9 @@
-//auto scroll function automatically scrolls down to the top of the accordion
+//auto scroll function automatically scrolling down to the top of the accordion
  $(document).ready(function(){
     var navbar = document.getElementById("navbar");
-var navbarHeight = navbar.getBoundingClientRect().height;
+   //code executes if navbar element is present on page (fixes issue of getboundingclientrect error)
+   if (navbar) {
+    var navbarHeight = navbar.getBoundingClientRect().height;
   //iphone dropdown in buy section
     $("#iphonedropdown img").click(function(){
         $('html, body').animate({
@@ -19,30 +21,29 @@ var navbarHeight = navbar.getBoundingClientRect().height;
         var samsungCollapse = document.getElementById('samsungcollapse');
         samsungCollapse.scrollIntoView({ behavior: "smooth" });
     });
+  }
 }); 
 
 //back button for buy section
 $(document).ready(function() {
-  $("#back-button").click(function(event) {
-    event.preventDefault();
-    $("#iphonecollapse").collapse("hide", function() {
-      $("html, body").animate({ scrollTop: 0 }, "slow");
+  $("#back-button").on('click', function() {
+    $("#iphonecollapse").collapse('hide');
+    window.scrollTo(0, 0);
     });
   });
-});
 
-//separate auto scroll function for repair section
 $(document).ready(function(){
   var navbar = document.getElementById("navbar2");
-  var navbarHeight = navbar.getBoundingClientRect().height;
-
+  //code executes if navbar element is present on page (fixes issue of getboundingclientrect error)
+  if (navbar) {
+    var navbarHeight = navbar.getBoundingClientRect().height;
+    console.log(navbarHeight);
   //iphone device selection dropdown
   $("#iphonerepair img").click(function(){
     var selectDeviceHeight = $(".selectdevice").outerHeight();
     $('html, body').animate({
       scrollTop: $("#accordion").offset().top - navbarHeight + selectDeviceHeight}, 1000);
-    var phoneImgContainer = document.getElementById('phoneimgcontainer');
-    phoneImgContainer.scrollIntoView({ behavior: "smooth" });
+    $('#phoneimgcontainer').scrollIntoView({ behavior: "smooth" });
     });
 
   //ipad device selection dropdown
@@ -50,36 +51,124 @@ $(document).ready(function(){
     var selectDeviceHeight = $(".selectdevice").outerHeight();
     $('html, body').animate({
       scrollTop: $("#accordion").offset().top - navbarHeight + selectDeviceHeight}, 1000);
-    var ipadimgcontainer = document.getElementById('ipadimgcontainer');
-    ipadimgcontainer.scrollIntoView({ behavior: "smooth" });
+    $('#ipadimgcontainer').scrollIntoView({ behavior: "smooth" });
     });
-    
     //microsoldering repair dropdown
   $("#microsolderingrepair img").click(function(){
     var selectDeviceHeight = $(".selectdevice").outerHeight();
     $('html, body').animate({
       scrollTop: $("#accordion").offset().top - navbarHeight + selectDeviceHeight}, 1000);
-    var microsolderingContainer = document.getElementById('microsolderingcontainer');
-    microsolderingContainer.scrollIntoView({ behavior: "smooth" });
+    $('#microsolderingcard').scrollIntoView({ behavior: "smooth" });
+  });
+
+  $('#macrepair img').click(function(){
+    var selectDeviceHeight = $(".selectdevice").outerHeight();
+    $('html, body').animate({
+      scrollTop: $('#accordion').offset().top - navbarHeight + selectDeviceHeight}, 1000);
+      $('#maccard').scrollIntoView({ behavior: "smooth" });
     });
 
+    //android repair dropdown scroll
+    $('#androidrepair img').click(function(){
+      var selectDeviceHeight = $(".selectdevice").outerHeight();
+      $('html, body').animate({
+        scrollTop: $('#accordion').offset().top - navbarHeight + selectDeviceHeight}, 1000);
+      $('#samsungcard').scrollIntoView({ behavior: "smooth" });
+      });
+    
+    //srs repair dropdown scroll
+    $('#srsrepair img').click(function(){
+      var selectDeviceHeight = $(".selectdevice").outerHeight();
+      $('html, body').animate({
+        scrollTop: $('#accordion').offset().top - navbarHeight + selectDeviceHeight}, 1000);
+      $('#srscard').scrollIntoView({ behavior: "smooth" });
+    });
+  
+    //sub-accordion dropdown scroll
+    //**fixes the issue where the sub-accordion scroll position is affected by primary accordion scroll position
+    
+    //iphone sub-accordion section
+     $('#iphonecard img').click(function() {
+      var selectDeviceHeight = $(".selectdevice").outerHeight();
+      $('html, body').animate({
+      scrollTop: $('#accordion').offset().top - navbarHeight + selectDeviceHeight}, 0);
+    $('#iphonesubcard1').scrollTop({ behavior: "smooth" });
+    });
+
+    //ipad sub-accordion section
+    $('#ipadcard img').click(function() {
+      var selectDeviceHeight = $(".selectdevice").outerHeight();
+      $('html, body').animate({
+      scrollTop: $('#accordion').offset().top - navbarHeight + selectDeviceHeight}, 0);
+    $('#ipadsubcard1').scrollTop({ behavior: "smooth" });
+    });
+  };
 });
 
-
-//back button on repair section collapsing sub-accordion & showing primary accordion
-$(document).ready(function(){
-  $('#backbutton2').on("click", function(){
-    $('#iphonesubcard1').collapse("hide");
-    $('#iphonecard').collapse("show");
+//repair section back buttons
+$(document).ready(function() {
+  //both iphone repair back buttons 
+  $('#iphonebutton2').on('click', function() {
+    $('#iphonesubcard1').collapse('hide');
+    $('#iphonecard').collapse('show');
+    // scroll to the top of the page
+   // window.scrollTo(0, 0);
   });
-  $('#backbutton3').on("click", function(){
-    $('#iphonecard').collapse("hide");
+  $('#iphonebutton1').on('click', function() {
+    $('#iphonecard').collapse('hide');
+    // scroll to the top of the page
+    window.scrollTo(0, 0);
+  });
+  //both ipad repair back buttons
+  $('#ipadbutton2').on('click', function(){
+    $('#ipadsubcard1').collapse('hide');
+    $('#ipadcard').collapse('show');
+  });
+  $('#ipadbutton1').on('click', function(){
+    $('#ipadcard').collapse('hide');
+    //scroll to the top of the page
+    window.scrollTo(0, 0);
+  });
+  //microsoldering repair back button
+  $('#microsolderingbutton').on('click', function(){
+    $('#microsolderingcard').collapse('hide');
+    window.scrollTo(0, 0);
+  });
+  //android repair back button
+  $('#androidbackbutton').on('click', function(){
+    $('#samsungcard').collapse('hide');
+    window.scrollTo(0, 0);
+  });
+  //mac repair back button
+  $('#macbackbutton').on('click', function(){
+    $('#maccard').collapse('hide');
+    window.scrollTo(0, 0);
+  });
+  //srs repair back button
+  $('#srsbutton').on('click', function(){
+    $('#srscard').collapse('hide');
+    window.scrollTo(0, 0);
   });
 });
 
-//create an empty array and store each iphone img with div id="iphone1-19" in an array
-//jquery way of accomplishing storing <a id="iphone1-19"> and assigning click event
-//on click load data, then get index of the data item (screen, backglass, etc...) corresponding to the index of the #iphone1-19 div when clicked
+window.addEventListener('scroll', function() {
+  console.log('scroll event detected');
+  var nav = document.querySelector('nav');
+  var scrollPosition = window.scrollY;
+  if (scrollPosition > 250) {
+    nav.classList.add('fixed-top');
+  } else {
+    nav.classList.remove('fixed-top');
+  }
+});
+
+//makes page auto scroll to the top when refreshed
+history.scrollRestoration = "manual";
+
+//making the same accordion drop down for each instance of the primary accordion
+//store each iphone img in an array
+//jquery way of accomplishing storing <a id="iphone1-19" and assigning click event
+//function loops through a elements on the phoneimgcontainer creating an array of 0-18 (19 elements)
 var iphoneStorage = [];
 $(document).ready(function(){
   $('#phoneimgcontainer a').each(function(i){
@@ -88,7 +177,7 @@ $(document).ready(function(){
     $(iphoneStorage[i]).on("click", function(){
       console.log('you clicked ' + iphoneStorage[i]);
 
-      //getting data from json doc
+      //getting price element from doc
       $.getJSON('priceData.json', function(data) {
          
         let index = i;
@@ -96,19 +185,20 @@ $(document).ready(function(){
         let price3 = data.backglass[index];
         let price4 = data.battery[index];
         let price5 = data.chargingport[index];
-         
-       //jquery way of doing innerHTML, loads data into the correct div id (iprice2,3,4,5)
+        let model = data.model[index];
+
          $('#iprice2').html(price2);
          $('#iprice3').html(price3);
          $('#iprice4').html(price4);
          $('#iprice5').html(price5);
+         $('#iphonemodel').html(model);
        });  
     });
   });
 });
 
 //function to get data from phonePriceData.json and insert into buy iphone section
-//definitely not the most efficient way to do this (more efficient way is probably through a loop like my previous function) but it works with the way I built the html page and json doc
+//definitely not the most efficient way to do this but it works with the way I built the html page and json doc
 $(document).ready(function(){
   $.getJSON('phonePriceData.json', function(data){
     //reading data and storing to a variable
@@ -156,7 +246,7 @@ $(document).ready(function(){
     var buyprice42 = data.iPhone7[0]["32GB"];
     var buyprice43 = data.iPhone7[1]["128GB"];
     
-    //using flexbox id's to put the price in the right spot
+    //altering flexbox id's to put the price in the right spot
     $('#13pm-1').html(buyprice1);
     $('#13pm-2').html(buyprice2);
     $('#13p-1').html(buyprice3);
@@ -200,6 +290,33 @@ $(document).ready(function(){
     $('#8-2').html(buyprice41);
     $('#7-1').html(buyprice42);
     $('#7-2').html(buyprice43);
+  });
+});
+
+//function to get data from ipadPriceData and move corresponding prices to the appropriate ipad model
+var ipadRepairData = [];
+$(document).ready(function(){
+  $('#ipadimgcontainer a').each(function(i){
+     ipadRepairData.push('#ipad' + (i + 1));
+    //ipadRepairData.push(i++); 
+    $(ipadRepairData[i]).on("click", function(){
+      console.log('you clicked ' + ipadRepairData[i]);
+
+      //getting price element from doc
+      $.getJSON('ipadPriceData.json', function(data) {
+         
+        let index = i;
+        let price1 = data.screen[index];
+        let price2 = data.battery[index];
+        let price3 = data.chargingport[index];
+        let model = data.model[index];
+
+         $('#ipadprice2').html(price1);
+         $('#ipadprice3').html(price2);
+         $('#ipadprice4').html(price3);
+         $('#ipadmodel2').html(model);
+       });  
+    });
   });
 });
 
