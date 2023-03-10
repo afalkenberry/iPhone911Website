@@ -13,18 +13,42 @@ html, body {
   background-color: #efeeee;
 }
 
+.copyrightbanner {
+  padding-bottom: 0px;
+}
 .hero-img img {
   height: auto;
+  /*navbar height is 56, to offset height difference*/
+  margin-top: 56px;
+  height: 400px;
   width: 100%;
-  object-fit: cover;
+  background-color: rgb(58, 57, 57);
+  object-fit: scale-down;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-img img {
+    height: 225px;
+    width: 100%;
+    max-width: 100%;
+    object-fit: fill;
+  }
+}
+
+#navbar {
+  background-color: rgb(232, 232, 232);
+}
+
+#navbar2 {
+  background-color: rgb(232, 232, 232);
 }
 
 #navbarNav {
-  padding-left: 40%;
+  padding-right: 15%;
 }
-
+ 
 .navbar-brand {
-  padding-left: 20%;
+  padding-left: 15%;
 }
 
 img {
@@ -35,15 +59,21 @@ img {
 }
 
 #aboutus p{
-  margin:0 auto;
-  padding: 0 5% 0 5%; 
+  margin: 0 auto;
+  padding: 0 3% 0 3%; 
   width: inherit;
   font-size: 1em;
   line-height: 1.45em;
   letter-spacing: .05em;
   color: rgb(64, 64, 64);
-  text-align: justify;
+  word-spacing: normal;
 }
+
+#aboutus h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 #aboutus h4{
   color: rgb(64, 64, 64);
   padding: 0 5% 0 5%;
@@ -56,13 +86,13 @@ img {
 
 #navbar {
   width: inherit;
-  margin: 0 auto;
-  text-align: center;
+  /*text-align: center;*/
   position: fixed;
 }
 
+
 .warranty-header {
-  margin-top: 10px;
+  padding-top: 20px;
 }
 
 figure {
@@ -70,11 +100,20 @@ figure {
 }
 
 #buyphoneimg {
-  margin: 10% auto;
+  padding-top: 14%;
+}
+
+/*Setting color for buy section prices*/
+#buypricing .flex-item {
+  color: #007bff;
+}
+
+#buystorage .flex-item {
+  font-weight: 500;
 }
 
 #iphonedropdown {
-  padding-right: 30px;
+  /*padding-right: 30px;*/
   height: 300px;
 }
 
@@ -85,7 +124,7 @@ figure {
 }
 
 #samsungdropdown {
-  padding-left: 30px;
+  /*padding-left: 30px;*/
   height: 300px;
 }
 
@@ -119,7 +158,33 @@ picture {
   height: auto;
 }
 
-/*setting margin to space out images*/
+/*Setting img and container height for repair section select device images*/
+#repairdevices .container {
+  margin-top: 50px;
+}
+
+#repairdevices .selectdevice {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+#repairdevices h1 {
+  margin-bottom: 40px;
+}
+
+#repairdevices .col {
+  height: 300px;
+  width: 100%;
+}
+
+#repairdevices img {
+  padding-top: 10px;
+  height: 230px;
+  width: 230px;
+  object-fit: scale-down;
+}
+
 .repair-img img{
   height: 200px;
   width: inherit;
@@ -132,7 +197,7 @@ picture {
     box-shadow: none;
 }
 
-/* form css */
+/* contact form css */
 form input {
   margin: 20px;
 }
@@ -147,12 +212,13 @@ form textarea {
   margin: 20px;
 }
 
-#message {
-  padding: 100px;
+#contact-desc {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-#repairdevices .container {
-  margin-top: 50px;
+#message {
+  padding: 100px;
 }
 
 /*should probably put a class on this specific h1*/
@@ -162,15 +228,6 @@ form textarea {
 
 }
 
-#repairdevices .selectdevice {
-  margin-top: 0px;
-  padding-bottom: 20px;
-}
-
-#repairdevices h1 {
-  margin-bottom: 40px;
-}
-
 #ipadcard .ipadmodel {
   padding-bottom: 50px;
   padding-top: 50px;
@@ -178,17 +235,32 @@ form textarea {
 
 #back-button {
   position: fixed;
-  margin-top: 50px;
+ 
+  margin-top: 56px;
+
 }
 
+/*need to center buttons on page*/
 #backbutton2 {
-  position: fixed;
-  margin-top: 5px;
+ /*position: fixed;*/
+  
+  /*margin-left: 800px;*/
 }
 
 #backbutton3 {
-  position: fixed;
-  margin-top: 5px;
+  /*position: fixed;*/
+  /*margin-right: 100px;*/
+  
+  
+}
+
+@media (max-width: 514px) {
+  .fixed-top {
+    position: relative !important;
+    top: auto !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
 }
 
 .d-flex img{
@@ -197,6 +269,7 @@ form textarea {
   object-fit: scale-down;
 }
 
+/*Mac Styling*/
 #macsubcardcol {
   background-color: blue;
   height: 400px;
@@ -209,6 +282,30 @@ form textarea {
 
 #macsubcardcol h5 {
   padding-top: 30px;
+}
+
+#mac-repairs {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+#mac-repairs h1{
+  padding-top: 40px;
+}
+
+#mac-repairs .col{
+  height: 400px;
+}
+
+#mac-repairs .img-fluid {
+  height: 300px;
+  width: 300px;
+  object-fit: scale-down;
+  padding-top: 40px;
+}
+
+#mac-repairs .order-2 {
+  color: #007bff;
 }
 
 #microsolderingcard {
@@ -225,13 +322,54 @@ form textarea {
 }
 
 #microsoldering col {
-  background-color: blue;
   height: 400px;
 }
 
 #microsolderingcol img {
   height: 300px;
   object-fit: scale-down;
+}
+
+#microsolderingcol .order-2 {
+  color: #007bff;
+}
+
+#repairmicrosoldering img {
+  width: 200px;
+}
+
+
+
+
+/*This doesn't seem to work*/
+#srscard img {
+  height: 400px;
+  object-fit: scale-down;
+}
+
+#srscard {
+  padding-top: 40px;
+}
+
+#srscard h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#srscard #srspricecol {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#srscard .order-1 {
+  padding-bottom: 40px;
+}
+
+#srscard .order-2 {
+  color: #007bff;
+}
+
+#srsbutton {
+  padding-top: 10px;
 }
 
 .mobodescription {
@@ -242,6 +380,8 @@ form textarea {
 padding-top: 80px;
 }
 
+
+
 .ipad-img img {
   height: 200px;
   object-fit: scale-down;
@@ -250,17 +390,93 @@ padding-top: 80px;
 
 /*Styling for phone repair container*/
 #phonerepaircontainer {
-  background-color: blue;
-  padding-bottom: 155px;
-  padding-top: 155px;
+  padding-bottom: 105px;
+  padding-top: 105px;
+  position: relative;
 }
 
-#phonerepaircontainer img {
-  height: 280px;
-  width: auto;
+
+
+
+#phonerepaircontainer .img-fluid {
+  height: 300px;
+  width: 300px;
+  object-fit: scale-down;
   padding-top: 40px;
 }
 
 #phonerepaircontainer h3 {
   margin-bottom: 100px;
+}
+
+#phonerepaircontainer .order-1 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#phonerepaircontainer .order-2 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+/*Styling for android img conainer*/
+
+#androidimgcontainer {
+  padding-top: 70px;
+  padding-bottom: 45px;
+}
+
+#androidimgcontainer .d-flex{
+  padding-bottom: 10px;
+}
+
+#androidimgcontainer h1{
+  padding-top: 15px;
+  padding-bottom: 35px;
+}
+
+#androidimgcontainer col{
+  height: 400px;
+}
+
+#androidimgcontainer bold {
+  padding-bottom: 200px;
+}
+
+#androidimgcontainer .img-fluid {
+  height: 300px;
+  width: 300px;
+  object-fit: scale-down;
+  padding-top: 40px;
+
+
+}
+
+/*#androidimgcontainer h3*/
+
+#androidimgcontainer  .order-1 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#androidimgcontainer .order-2 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+
+
+#flexbox .flex-row {
+  margin-left: 10px;
+  text-align: center;
+}
+
+form {
+  margin-right: 45px;
 }
