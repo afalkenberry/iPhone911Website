@@ -9,8 +9,7 @@
         $('html, body').animate({
             scrollTop: $("#accordion").offset().top - navbarHeight
         }, 1000);
-        var iphoneCollapse = document.getElementById('iphonecollapse');
-        iphoneCollapse.scrollIntoView({ behavior: "smooth" });
+        $('#iphonecollapse')[0].scrollIntoView({ behavior: "smooth" });
     });
    
   //samsung dropdown in buy section
@@ -18,8 +17,7 @@
         $('html, body').animate({
             scrollTop: $("#accordion").offset().top - navbarHeight
         }, 1000);
-        var samsungCollapse = document.getElementById('samsungcollapse');
-        samsungCollapse.scrollIntoView({ behavior: "smooth" });
+        $('#samsungcollapse')[0].scrollIntoView({ behavior: "smooth" });
     });
   }
 }); 
@@ -32,6 +30,9 @@ $(document).ready(function() {
     });
   });
 
+
+
+
 $(document).ready(function(){
   var navbar = document.getElementById("navbar2");
   //code executes if navbar element is present on page (fixes issue of getboundingclientrect error)
@@ -43,7 +44,8 @@ $(document).ready(function(){
     var selectDeviceHeight = $(".selectdevice").outerHeight();
     $('html, body').animate({
       scrollTop: $("#accordion").offset().top - navbarHeight + selectDeviceHeight}, 1000);
-    $('#phoneimgcontainer').scrollIntoView({ behavior: "smooth" });
+    $('#phoneimgcontainer')[0].scrollIntoView({ behavior: "smooth" });
+   /* $('#phoneimgcontainer').scrollIntoView({ behavior: "smooth" });*/
     });
 
   //ipad device selection dropdown
@@ -51,21 +53,21 @@ $(document).ready(function(){
     var selectDeviceHeight = $(".selectdevice").outerHeight();
     $('html, body').animate({
       scrollTop: $("#accordion").offset().top - navbarHeight + selectDeviceHeight}, 1000);
-    $('#ipadimgcontainer').scrollIntoView({ behavior: "smooth" });
+    $('#ipadimgcontainer')[0].scrollIntoView({ behavior: "smooth" });
     });
     //microsoldering repair dropdown
   $("#microsolderingrepair img").click(function(){
     var selectDeviceHeight = $(".selectdevice").outerHeight();
     $('html, body').animate({
       scrollTop: $("#accordion").offset().top - navbarHeight + selectDeviceHeight}, 1000);
-    $('#microsolderingcard').scrollIntoView({ behavior: "smooth" });
+    $('#microsolderingcard')[0].scrollIntoView({ behavior: "smooth" });
   });
 
   $('#macrepair img').click(function(){
     var selectDeviceHeight = $(".selectdevice").outerHeight();
     $('html, body').animate({
       scrollTop: $('#accordion').offset().top - navbarHeight + selectDeviceHeight}, 1000);
-      $('#maccard').scrollIntoView({ behavior: "smooth" });
+      $('#maccard')[0].scrollIntoView({ behavior: "smooth" });
     });
 
     //android repair dropdown scroll
@@ -73,7 +75,7 @@ $(document).ready(function(){
       var selectDeviceHeight = $(".selectdevice").outerHeight();
       $('html, body').animate({
         scrollTop: $('#accordion').offset().top - navbarHeight + selectDeviceHeight}, 1000);
-      $('#samsungcard').scrollIntoView({ behavior: "smooth" });
+      $('#samsungcard')[0].scrollIntoView({ behavior: "smooth" });
       });
     
     //srs repair dropdown scroll
@@ -81,9 +83,11 @@ $(document).ready(function(){
       var selectDeviceHeight = $(".selectdevice").outerHeight();
       $('html, body').animate({
         scrollTop: $('#accordion').offset().top - navbarHeight + selectDeviceHeight}, 1000);
-      $('#srscard').scrollIntoView({ behavior: "smooth" });
+      $('#srscard')[0].scrollIntoView({ behavior: "smooth" });
     });
   
+  
+
     //sub-accordion dropdown scroll
     //**fixes the issue where the sub-accordion scroll position is affected by primary accordion scroll position
     
@@ -109,10 +113,8 @@ $(document).ready(function(){
 $(document).ready(function() {
   //both iphone repair back buttons 
   $('#iphonebutton2').on('click', function() {
-    $('#iphonesubcard1').collapse('hide');
     $('#iphonecard').collapse('show');
-    // scroll to the top of the page
-   // window.scrollTo(0, 0);
+    $('#iphonesubcard1').collapse('hide');
   });
   $('#iphonebutton1').on('click', function() {
     $('#iphonecard').collapse('hide');
@@ -121,12 +123,12 @@ $(document).ready(function() {
   });
   //both ipad repair back buttons
   $('#ipadbutton2').on('click', function(){
-    $('#ipadsubcard1').collapse('hide');
     $('#ipadcard').collapse('show');
+    $('#ipadsubcard1').collapse('hide');
+    
   });
   $('#ipadbutton1').on('click', function(){
     $('#ipadcard').collapse('hide');
-    //scroll to the top of the page
     window.scrollTo(0, 0);
   });
   //microsoldering repair back button
@@ -150,6 +152,10 @@ $(document).ready(function() {
     window.scrollTo(0, 0);
   });
 });
+
+
+
+
 
 window.addEventListener('scroll', function() {
   console.log('scroll event detected');
@@ -319,4 +325,3 @@ $(document).ready(function(){
     });
   });
 });
-
